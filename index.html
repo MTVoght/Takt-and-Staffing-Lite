@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#e8e4db">
-  <title>Takt &amp; Staffing | Backflush Labs</title>
+  <title>Takt &amp; Staffing Lite | Backflush Labs</title>
   <style>
     :root {
       --bg:#e8e4db; --panel:#f7f3ea; --panel2:#eee9df; --panel3:#ded8cc;
@@ -39,12 +39,9 @@
     .panel{padding:21px}.panel h3{font-size:14px;margin:0}.panel-head{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-bottom:17px}.panel-head p{font-size:11px;color:var(--muted);margin:3px 0 0}
     .staff-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.staff-case{border:1px solid var(--line);border-radius:12px;padding:13px 10px;background:var(--panel2);text-align:center}.staff-case.current{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}.staff-case .people{font-weight:850}.staff-case .output{font-size:19px;font-weight:850;margin:5px 0 2px}.staff-case .delta{font-size:10px;color:var(--muted)}.positive{color:var(--good)!important}.negative{color:var(--danger)!important}
     .recommendations{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:14px}.rec{border:1px solid var(--line);border-radius:12px;padding:13px}.rec b{display:block;font-size:12px;margin-bottom:4px}.rec span{font-size:10px;color:var(--muted)}
-    .steps-wrap{display:block}.table-scroll{overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}.step-table{width:100%;border-collapse:collapse}.step-table th{text-align:left;color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.1em;padding:0 8px 8px}.step-table td{border-top:1px solid var(--line);padding:9px 8px;vertical-align:middle}.step-table input{width:100%;border:1px solid transparent;background:var(--panel2);color:var(--text);border-radius:8px;padding:8px}.step-table input:focus{outline:0;border-color:var(--accent)}.step-table input[aria-invalid="true"]{border-color:var(--danger)}.add-step{border:1px dashed var(--line);background:transparent;border-radius:10px;width:100%;padding:9px;color:var(--muted);cursor:pointer;margin-top:10px}.step-table .load-cell{min-width:120px}.loadbar{height:6px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:4px}.loadbar i{display:block;height:100%;background:var(--good);border-radius:inherit}.loadbar i.warn{background:var(--warn)}.loadbar i.bad{background:var(--danger)}
-    .process-steps{display:grid;gap:10px}.process-step{display:grid;gap:10px;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--panel2)}.process-step-name,.process-step-field,.process-step-load{min-width:0}.process-step label,.process-step-caption{display:block;margin-bottom:5px;color:var(--muted);font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.process-step input{width:100%;min-width:0;padding:8px 9px;border:1px solid var(--line);border-radius:8px;background:var(--input);color:var(--text);font-weight:700}.process-step input:focus{outline:0;border-color:var(--accent);box-shadow:0 0 0 2px var(--focus)}.process-step input[aria-invalid="true"]{border-color:var(--danger)}.process-step-details{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(76px,1fr) 26px;gap:8px;align-items:end}.process-step-load{padding-bottom:7px}.process-step-load strong{display:block;font-size:11px}.process-step .remove{width:26px;height:35px;border:0;background:transparent;color:var(--muted);cursor:pointer;font-size:20px}.process-step .remove:hover{color:var(--danger)}.process-step .remove:disabled{opacity:.35;cursor:not-allowed}
-    .line-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:15px}.mini{border:1px solid var(--line);border-radius:11px;padding:12px}.mini span{display:block;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.mini b{font-size:20px;display:block;margin-top:3px}
     .empty{color:var(--muted);text-align:center;padding:30px}.footer{color:var(--muted);font-size:10px;text-align:center;padding:22px}
     @media(max-width:980px){.layout{grid-template-columns:1fr}.inputs{position:static}.kpis{grid-template-columns:1fr 1fr}.hero{align-items:start;flex-direction:column}.recommendations{grid-template-columns:1fr}}
-    @media(max-width:600px){.shell{padding:15px}.brand-logo{width:148px;max-height:46px}.theme-button{padding:7px 8px;font-size:10px}.hero h1{font-size:39px}.field-grid{grid-template-columns:1fr 1fr}.kpis,.line-metrics{grid-template-columns:1fr 1fr}.staff-strip{grid-template-columns:repeat(5,minmax(82px,1fr));overflow:auto;padding-bottom:4px}.summary,.panel,.inputs{padding:16px}.step-table{min-width:460px;font-size:11px}.step-table .load-cell{min-width:105px}.process-step{padding:10px}.process-step-details{grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(66px,1fr) 24px;gap:6px}.process-step .remove{width:24px}}
+    @media(max-width:600px){.shell{padding:15px}.brand-logo{width:148px;max-height:46px}.theme-button{padding:7px 8px;font-size:10px}.hero h1{font-size:39px}.field-grid{grid-template-columns:1fr 1fr}.kpis{grid-template-columns:1fr 1fr}.staff-strip{grid-template-columns:repeat(5,minmax(82px,1fr));overflow:auto;padding-bottom:4px}.summary,.panel,.inputs{padding:16px}}
   </style>
 </head>
 <body>
@@ -57,11 +54,11 @@
       </div>
     </header>
     <section class="hero">
-      <div><h1>Takt &amp; Staffing</h1></div>
+      <div><h1>Takt &amp; Staffing Lite</h1></div>
     </section>
     <main class="layout">
       <section class="card inputs">
-        <div class="card-title"><h2>Production assumptions</h2><span>Line-balance model</span></div>
+        <div class="card-title"><h2>Production assumptions</h2><span>Workload model</span></div>
         <div class="section-label first">Demand & schedule</div>
         <div class="field-grid">
           <div class="field"><label for="demand">Required quantity</label><div class="input-wrap"><input id="demand" type="number" value="480" min="1" max="9007199254740991" step="1" required><span>units</span></div></div>
@@ -73,14 +70,10 @@
         </div>
         <div class="section-label">Performance</div>
         <div class="field-grid">
+          <div class="field"><label for="laborContent">Total labor content</label><div class="input-wrap"><input id="laborContent" type="number" value="180" min="0.000001" step="any" required><select id="laborUnit" class="unit-select" aria-label="Labor content unit"><option value="seconds">sec/unit</option><option value="minutes">min/unit</option><option value="hours">hr/unit</option></select></div></div>
           <div class="field"><label for="efficiency">Expected efficiency</label><div class="input-wrap"><input id="efficiency" type="number" value="85" min="1" max="100" required><span>%</span></div></div>
-          <div class="field"><label for="parallelLines">Parallel lines</label><div class="input-wrap"><input id="parallelLines" type="number" value="1" min="1" step="1" required><span>lines</span></div></div>
+          <div class="field"><label for="currentStaff">Current direct staff</label><div class="input-wrap"><input id="currentStaff" type="number" value="4" min="0" step="1" required><span>people</span></div></div>
           <div class="field wide"><div class="hint">Efficiency adjusts productive output for normal operating losses. Planned breaks and downtime are deducted separately.</div></div>
-        </div>
-        <div>
-          <div class="section-label">Process steps</div>
-          <div class="process-steps" id="stepBody" role="list" aria-label="Process steps"></div>
-          <button class="add-step" id="addStep">＋ Add process step</button>
         </div>
         <div class="validation-message" id="validationMessage" role="alert" aria-live="assertive" hidden></div>
       </section>
@@ -97,17 +90,6 @@
           <div class="insight" id="insight"></div>
         </section>
 
-        <section class="card panel steps-wrap">
-          <div class="panel-head"><div><h3>Line balance</h3><p>Step load compared with takt; staffing is applied within each process step.</p></div></div>
-          <div class="line-metrics">
-            <div class="mini"><span>Bottleneck</span><b id="bottleneck">—</b></div>
-            <div class="mini"><span>Line balance</span><b id="balance">—</b></div>
-            <div class="mini"><span>Labor content</span><b id="totalLabor">—</b></div>
-            <div class="mini"><span>Constraint capacity</span><b id="constraintCap">—</b></div>
-          </div>
-          <div class="table-scroll"><table class="step-table"><thead><tr><th scope="col">Process step</th><th scope="col">Effective cycle</th><th scope="col">Assigned</th><th scope="col" class="load-cell">Takt load</th></tr></thead><tbody id="balanceBody"></tbody></table></div>
-        </section>
-
         <section class="card panel">
           <div class="panel-head"><div><h3>Staffing sensitivity</h3><p>Expected output with 5% and 10% more or less staffing, using the same schedule and efficiency.</p></div></div>
           <div class="staff-strip" id="staffStrip"></div>
@@ -119,46 +101,62 @@
   </div>
   <script>
     const $ = id => document.getElementById(id);
-    const defaults = [
-      {name:'Material load', cycle:45, people:1},
-      {name:'Assembly', cycle:110, people:2},
-      {name:'Test & inspect', cycle:70, people:1},
-      {name:'Pack', cycle:38, people:1}
-    ];
-    const stateKey='bl-takt-staffing-full-v1';
-    const legacyStateKey='bl-takt-staffing-v2';
-    const stateFields=['demand','period','shiftHours','shifts','breaks','plannedLoss','efficiency','parallelLines'];
-    let steps=defaults.map(step=>({...step}));
+    const stateKey = 'bl-takt-staffing-lite-v1';
+    const legacyStateKey = 'bl-takt-staffing-v2';
+    const stateFields = ['demand','period','shiftHours','shifts','breaks','plannedLoss','laborContent','laborUnit','efficiency','currentStaff'];
+    const laborMultipliers = {seconds:1,minutes:60,hours:3600};
+    let previousLaborUnit = 'seconds';
 
-    const n=id=>Number($(id).value);
-    const fmt=(value,decimals=0)=>Number.isFinite(value)?value.toLocaleString(undefined,{maximumFractionDigits:decimals,minimumFractionDigits:decimals}):'—';
-    const esc=value=>String(value).replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
-    const wholeUnits=value=>Math.max(0,Math.floor(value+1e-9));
+    const n = id => Number($(id).value);
+    const fmt = (value,decimals=0) => Number.isFinite(value)
+      ? value.toLocaleString(undefined,{maximumFractionDigits:decimals,minimumFractionDigits:decimals})
+      : '—';
+    const esc = value => String(value).replace(/[&<>'"]/g,char => ({
+      '&':'&amp;', '<':'&lt;', '>':'&gt;', "'":'&#39;', '"':'&quot;'
+    }[char]));
+    const wholeUnits = value => Math.max(0,Math.floor(value+1e-9));
 
-    function storedValue(key){try{return localStorage.getItem(key)}catch(error){return null}}
-    function storeValue(key,value){try{localStorage.setItem(key,value)}catch(error){/* Storage can be unavailable inside embedded or private browsing contexts. */}}
+    function storedValue(key){
+      try{return localStorage.getItem(key)}catch(error){return null}
+    }
+
+    function storeValue(key,value){
+      try{localStorage.setItem(key,value)}catch(error){
+        /* Storage may be unavailable in embedded or private browsing contexts. */
+      }
+    }
 
     function persistState(){
       const values={};
       stateFields.forEach(id=>{values[id]=$(id).value});
-      storeValue(stateKey,JSON.stringify({steps:steps.map(step=>({...step})),values}));
+      storeValue(stateKey,JSON.stringify({values}));
     }
 
     function restoreState(){
       try{
         const saved=JSON.parse(storedValue(stateKey)||storedValue(legacyStateKey)||'null');
-        if(!saved||typeof saved!=='object')return;
-        if(saved.values&&typeof saved.values==='object')stateFields.forEach(id=>{if(Object.prototype.hasOwnProperty.call(saved.values,id))$(id).value=String(saved.values[id])});
-        if(Array.isArray(saved.steps)&&saved.steps.length)steps=saved.steps.map((step,index)=>({name:String(step.name||`Process step ${index+1}`),cycle:Number(step.cycle),people:Number(step.people)}));
-      }catch(error){/* Ignore malformed saved state and continue with the defaults. */}
+        if(saved&&saved.values&&typeof saved.values==='object'){
+          stateFields.forEach(id=>{
+            if(Object.prototype.hasOwnProperty.call(saved.values,id))$(id).value=String(saved.values[id]);
+          });
+        }
+      }catch(error){/* Ignore malformed saved values and use the defaults. */}
+      previousLaborUnit=laborMultipliers[$('laborUnit').value]?$('laborUnit').value:'seconds';
     }
 
-    function periodName(){return {shift:'shift',day:'day',week:'week',custom:'period'}[$('period').value]||'period'}
+    function periodName(){
+      return {shift:'shift',day:'day',week:'week',custom:'period'}[$('period').value]||'period';
+    }
 
     function applyPeriodPreset(preserve=false){
       const selected=$('period').value;
       const presets={shift:1,day:1,week:5};
-      const hints={shift:'One shift is required when planning by shift.',day:'Default: 1 shift per day — adjust if needed',week:'Default: 5 shifts per week — adjust for your schedule',custom:'Enter the total number of shifts in the custom period'};
+      const hints={
+        shift:'One shift is required when planning by shift.',
+        day:'Default: 1 shift per day — adjust if needed',
+        week:'Default: 5 shifts per week — adjust for your schedule',
+        custom:'Enter the total number of shifts in the custom period'
+      };
       if(selected==='shift')$('shifts').value='1';
       else if(!preserve&&selected!=='custom')$('shifts').value=String(presets[selected]);
       $('shiftsField').hidden=selected==='shift';
@@ -173,174 +171,123 @@
       element.querySelector('span').textContent=label;
     }
 
-    function availableSeconds(){return (n('shiftHours')*60-n('breaks')-n('plannedLoss'))*60*n('shifts')}
-    function setInvalid(element,invalid){if(element)element.setAttribute('aria-invalid',String(Boolean(invalid)))}
+    function setInvalid(element,invalid){
+      if(element)element.setAttribute('aria-invalid',String(Boolean(invalid)));
+    }
+
+    function availableSeconds(){
+      return (n('shiftHours')*60-n('breaks')-n('plannedLoss'))*60*n('shifts');
+    }
+
+    function laborContentSeconds(){
+      return n('laborContent')*(laborMultipliers[$('laborUnit').value]||1);
+    }
 
     function validateInputs(){
       const errors=[];
-      const check=(id,condition,message)=>{setInvalid($(id),!condition);if(!condition)errors.push(message)};
+      const check=(id,condition,message)=>{
+        setInvalid($(id),!condition);
+        if(!condition)errors.push(message);
+      };
       const hasValue=id=>String($(id).value).trim()!=='';
-      const demand=n('demand'),shiftHours=n('shiftHours'),shifts=n('shifts'),breaks=n('breaks'),loss=n('plannedLoss'),efficiency=n('efficiency');
-      check('demand',Number.isSafeInteger(demand)&&demand>0,'Required quantity must be a whole number greater than zero and no more than 9,007,199,254,740,991.');
-      check('shiftHours',Number.isFinite(shiftHours)&&shiftHours>0&&shiftHours<=24,'Shift length must be greater than zero and no more than 24 hours.');
-      check('shifts',Number.isFinite(shifts)&&shifts>0,'Total shifts in the planning period must be greater than zero.');
-      check('breaks',hasValue('breaks')&&Number.isFinite(breaks)&&breaks>=0,'Breaks per shift cannot be negative or blank.');
-      check('plannedLoss',hasValue('plannedLoss')&&Number.isFinite(loss)&&loss>=0,'Other planned loss per shift cannot be negative or blank.');
-      check('efficiency',Number.isFinite(efficiency)&&efficiency>0&&efficiency<=100,'Expected efficiency must be greater than 0% and no more than 100%.');
-      if(Number.isFinite(shiftHours)&&Number.isFinite(breaks)&&Number.isFinite(loss)&&breaks+loss>=shiftHours*60){
-        setInvalid($('breaks'),true);setInvalid($('plannedLoss'),true);
+      const demand=n('demand'),hours=n('shiftHours'),shifts=n('shifts');
+      const breaks=n('breaks'),loss=n('plannedLoss'),efficiency=n('efficiency');
+      const labor=n('laborContent'),staff=n('currentStaff');
+
+      check('demand',Number.isSafeInteger(demand)&&demand>0,
+        'Required quantity must be a whole number greater than zero and no more than 9,007,199,254,740,991.');
+      check('shiftHours',Number.isFinite(hours)&&hours>0&&hours<=24,
+        'Shift length must be greater than zero and no more than 24 hours.');
+      check('shifts',Number.isFinite(shifts)&&shifts>0,
+        'Total shifts in the planning period must be greater than zero.');
+      check('breaks',hasValue('breaks')&&Number.isFinite(breaks)&&breaks>=0,
+        'Breaks per shift cannot be negative or blank.');
+      check('plannedLoss',hasValue('plannedLoss')&&Number.isFinite(loss)&&loss>=0,
+        'Other planned loss per shift cannot be negative or blank.');
+      check('efficiency',Number.isFinite(efficiency)&&efficiency>0&&efficiency<=100,
+        'Expected efficiency must be greater than 0% and no more than 100%.');
+      check('laborContent',Number.isFinite(labor)&&labor>0,
+        'Total labor content must be greater than zero.');
+      check('currentStaff',hasValue('currentStaff')&&Number.isFinite(staff)&&Number.isInteger(staff)&&staff>=0,
+        'Current direct staff must be entered as a whole number of zero or more.');
+
+      if(Number.isFinite(hours)&&Number.isFinite(breaks)&&Number.isFinite(loss)&&breaks+loss>=hours*60){
+        setInvalid($('breaks'),true);
+        setInvalid($('plannedLoss'),true);
         errors.push('Breaks and planned loss must leave some productive time in every shift.');
       }
 
-      const lines=n('parallelLines');
-      check('parallelLines',Number.isFinite(lines)&&Number.isInteger(lines)&&lines>=1,'Parallel lines must be a whole number of at least one.');
-      $('stepBody').querySelectorAll('input').forEach(input=>{
-        if(input.dataset.k==='name'){setInvalid(input,false);return}
-        const value=Number(input.value),valid=Number.isFinite(value)&&value>0;
-        setInvalid(input,!valid);
-        if(!valid)errors.push(`${steps[Number(input.dataset.i)].name||'A process step'} must have ${input.dataset.k==='cycle'?'a cycle time':'assigned staffing'} greater than zero.`);
-      });
       return [...new Set(errors)];
     }
 
     function renderInvalid(errors){
-      const message=$('validationMessage');
-      message.textContent=errors.join(' ');message.hidden=false;
+      $('validationMessage').textContent=errors.join(' ');
+      $('validationMessage').hidden=false;
       setStatus('warn','Check inputs');
       ['takt','staffing','capacity','gap'].forEach(id=>{$(id).textContent='—'});
       $('gap').className='value';
-      $('insight').textContent='Correct the highlighted input'+(errors.length===1?'':'s')+' to calculate a reliable staffing plan.';
-      $('staffStrip').innerHTML='';$('recommendations').innerHTML='';
-      ['bottleneck','balance','totalLabor','constraintCap'].forEach(id=>{$(id).textContent='—'});
-      $('balanceBody').innerHTML='';
-      steps.forEach((step,index)=>{
-        const load=$('inputLoad'+index),bar=$('inputBar'+index);
-        if(load)load.textContent='—';
-        if(bar){bar.style.width='0%';bar.className=''}
-      });
-    }
-
-    function renderStepInputs(){
-      $('stepBody').innerHTML=steps.map((step,index)=>`
-        <div class="process-step" role="listitem">
-          <div class="process-step-name">
-            <label for="stepName${index}">Step ${index+1}</label>
-            <input id="stepName${index}" data-i="${index}" data-k="name" value="${esc(step.name)}" aria-label="Process step ${index+1} name">
-          </div>
-          <div class="process-step-details">
-            <div class="process-step-field">
-              <label for="stepCycle${index}">Cycle sec</label>
-              <input id="stepCycle${index}" type="number" min="0.01" step="any" data-i="${index}" data-k="cycle" value="${step.cycle}" aria-label="${esc(step.name||'Process step')} cycle time in seconds">
-            </div>
-            <div class="process-step-field">
-              <label for="stepPeople${index}">People</label>
-              <input id="stepPeople${index}" type="number" min="0.01" step=".1" data-i="${index}" data-k="people" value="${step.people}" aria-label="${esc(step.name||'Process step')} assigned people">
-            </div>
-            <div class="process-step-load">
-              <span class="process-step-caption">Takt load</span>
-              <strong id="inputLoad${index}">—</strong>
-              <div class="loadbar"><i id="inputBar${index}"></i></div>
-            </div>
-            <button class="remove" data-remove="${index}" title="Remove ${esc(step.name||'process step')}" aria-label="Remove ${esc(step.name||'process step')}" ${steps.length===1?'disabled':''}>×</button>
-          </div>
-        </div>
-      `).join('');
-      $('stepBody').querySelectorAll('input').forEach(input=>input.addEventListener('input',event=>{
-        const index=Number(event.target.dataset.i),key=event.target.dataset.k;
-        steps[index][key]=key==='name'?event.target.value:Number(event.target.value);
-        if(key==='name'){
-          const name=event.target.value||'Process step';
-          $('stepCycle'+index).setAttribute('aria-label',`${name} cycle time in seconds`);
-          $('stepPeople'+index).setAttribute('aria-label',`${name} assigned people`);
-          $('stepBody').querySelectorAll('[data-remove]').forEach(button=>{
-            if(Number(button.dataset.remove)!==index)return;
-            button.setAttribute('title',`Remove ${name}`);
-            button.setAttribute('aria-label',`Remove ${name}`);
-          });
-        }
-        calculate();
-      }));
-      $('stepBody').querySelectorAll('[data-remove]').forEach(button=>button.addEventListener('click',()=>{
-        if(steps.length<=1)return;
-        steps.splice(Number(button.dataset.remove),1);renderStepInputs();calculate();
-      }));
+      $('insight').textContent='Correct the highlighted input'+(errors.length===1?'':'s')+
+        ' to calculate a reliable staffing plan.';
+      $('staffStrip').innerHTML='';
+      $('recommendations').innerHTML='';
     }
 
     function calcModel(staffOverride=null){
-      const demand=n('demand'),available=availableSeconds(),eff=n('efficiency')/100,takt=available/demand;
-      const lines=n('parallelLines'),lineTakt=takt*lines;
-      const labor=steps.reduce((total,step)=>total+step.cycle,0);
-      const theoreticalRequired=labor/(takt*eff);
-      const requiredByStep=steps.map(step=>Math.ceil(step.cycle/(lineTakt*eff)));
-      const required=requiredByStep.reduce((total,count)=>total+count,0)*lines;
-      let constraintCapacity=Infinity,bottleneck='',maxLoad=0;
-
-      steps.forEach(step=>{
-        const effectiveCycle=step.cycle/step.people;
-        const load=effectiveCycle/(lineTakt*eff);
-        if(load>maxLoad){maxLoad=load;bottleneck=step.name||'Unnamed step'}
-        constraintCapacity=Math.min(constraintCapacity,available*eff*step.people*lines/step.cycle);
-      });
-
-      const assignedPerLine=steps.reduce((total,step)=>total+step.people,0);
-      const assigned=assignedPerLine*lines;
-      const highestEffectiveCycle=Math.max(...steps.map(step=>step.cycle/step.people));
-      const balance=labor/(assignedPerLine*highestEffectiveCycle)*100;
-      const modeledStaff=staffOverride===null?assigned:Math.max(0,staffOverride);
-      const staffingRatio=assigned>0?modeledStaff/assigned:0;
-      const laborCapacity=available*eff*modeledStaff/labor;
-      const capacity=Math.min(laborCapacity,constraintCapacity*staffingRatio);
-
+      const demand=n('demand'),available=availableSeconds(),eff=n('efficiency')/100;
+      const takt=available/demand,labor=laborContentSeconds();
+      const required=labor/(takt*eff);
+      const staff=staffOverride===null?n('currentStaff'):Math.max(0,staffOverride);
+      const capacity=available*eff*staff/labor;
       const wholeCapacity=wholeUnits(capacity);
-      return {demand,available,eff,takt,lineTakt,lines,labor,required,theoreticalRequired,requiredByStep,capacity,wholeCapacity,gap:wholeCapacity-demand,constraintCapacity,bottleneck,maxLoad,balance};
+      return {
+        demand,available,eff,takt,labor,required,capacity,wholeCapacity,
+        gap:wholeCapacity-demand
+      };
     }
 
     function calculate(){
       if($('period').value==='shift')$('shifts').value='1';
       const errors=validateInputs();
       if(errors.length){renderInvalid(errors);return null}
-      $('validationMessage').hidden=true;$('validationMessage').textContent='';
+      $('validationMessage').hidden=true;
+      $('validationMessage').textContent='';
 
       const model=calcModel();
-      const current=steps.reduce((total,step)=>total+step.people,0)*model.lines;
-      const recommended=model.required;
+      const current=n('currentStaff');
+      const recommended=Math.ceil(model.required);
 
       $('takt').textContent=fmt(model.takt,1);
-      $('staffing').textContent=fmt(model.required,0);
-      $('staffingSub').textContent=`${fmt(model.theoreticalRequired,2)} theoretical · station-feasible`;
+      $('staffing').textContent=fmt(model.required,2);
+      $('staffingSub').textContent='productive people';
       $('capacity').textContent=fmt(model.wholeCapacity);
       $('gap').textContent=(model.gap>=0?'+':'')+fmt(model.gap);
       $('gap').className='value '+(model.gap>=0?'positive':'negative');
-      $('periodText').textContent=`${fmt(model.demand)} ${model.demand===1?'unit':'units'} per ${periodName()}`;
+      $('periodText').textContent=fmt(model.demand)+' '+(model.demand===1?'unit':'units')+
+        ' per '+periodName();
 
       if(model.gap<0)setStatus('bad','Under capacity');
       else if(model.gap/model.demand>.15)setStatus('warn','Excess capacity');
       else setStatus('good','Demand covered');
 
-      const lineDescription=model.lines===1?'the line':`${fmt(model.lines)} parallel lines`;
-      $('insight').innerHTML=model.maxLoad>1?`<strong>${esc(model.bottleneck)} is the constraint at ${fmt(model.maxLoad*100)}% of its per-line takt.</strong> Add staffing at that station or reduce its cycle time; the station-feasible plan requires ${fmt(recommended)} people across ${lineDescription}.`:`<strong>Every modeled step is within its per-line takt.</strong> ${esc(model.bottleneck||'The highest-load step')} is closest to the limit at ${fmt(model.maxLoad*100)}% across ${lineDescription}.`;
-      renderBalance(model);
+      const difference=recommended-current;
+      if(difference>0){
+        $('insight').innerHTML='<strong>Add '+fmt(difference)+' direct '+
+          (difference===1?'person':'people')+'.</strong> At the current assumptions, '+
+          fmt(current)+' people provide '+fmt(model.wholeCapacity)+
+          ' units against demand of '+fmt(model.demand)+'.';
+      }else if(difference<0){
+        $('insight').innerHTML='<strong>Demand requires about '+fmt(model.required,2)+
+          ' people.</strong> Current staffing is '+fmt(Math.abs(difference))+
+          ' above the rounded requirement; confirm that the excess is needed for variability, relief, or indirect work.';
+      }else{
+        $('insight').innerHTML='<strong>Current staffing matches the rounded requirement.</strong> '+
+          'The model provides '+fmt(model.gap)+' units of calculated headroom per '+periodName()+'.';
+      }
 
-      renderSensitivity(model,current);renderRecommendations(model,recommended);persistState();
+      renderSensitivity(model,current);
+      renderRecommendations(model,recommended);
+      persistState();
       return model;
-    }
-
-    function renderBalance(model){
-      $('bottleneck').textContent=model.bottleneck||'—';
-      $('balance').textContent=fmt(model.balance)+'%';
-      $('totalLabor').textContent=fmt(model.labor)+' sec';
-      $('constraintCap').textContent=fmt(wholeUnits(model.constraintCapacity));
-
-      $('balanceBody').innerHTML=steps.map((step,index)=>{
-        const effectiveCycle=step.cycle/step.people;
-        const load=effectiveCycle/(model.lineTakt*model.eff);
-        const severity=load>1?'bad':load>.85?'warn':'';
-        const bar=Math.min(100,load*100);
-        const inputBar=$('inputBar'+index),inputLoad=$('inputLoad'+index);
-        if(inputBar){inputBar.style.width=bar+'%';inputBar.className=severity}
-        if(inputLoad)inputLoad.textContent=fmt(load*100)+'%';
-        return `<tr><td><strong>${esc(step.name||'Unnamed step')}</strong><div class="hint">${fmt(step.cycle)} sec labor content</div></td><td>${fmt(effectiveCycle,1)} sec</td><td>${fmt(step.people,1)}<div class="hint">Need ${fmt(model.requiredByStep[index])}/line</div></td><td class="load-cell"><strong class="${load>1?'negative':''}">${fmt(load*100)}%</strong><div class="loadbar"><i class="${severity}" style="width:${bar}%"></i></div></td></tr>`;
-      }).join('');
     }
 
     function renderSensitivity(model,current){
@@ -349,21 +296,41 @@
         const modeledStaff=Math.max(0,current*(1+change));
         const capacity=wholeUnits(calcModel(modeledStaff).capacity);
         const difference=capacity-model.demand;
-        const label=change===0?'Current':`${change>0?'+':''}${fmt(change*100)}% staff`;
-        return `<div class="staff-case ${change===0?'current':''}"><div class="people">${label}</div><div class="output">${fmt(capacity)}</div><div class="delta ${difference>=0?'positive':'negative'}">${difference>=0?'+':''}${fmt(difference)} units</div><div class="hint">${fmt(modeledStaff,1)} people</div></div>`;
+        const label=change===0?'Current':(change>0?'+':'')+fmt(change*100)+'% staff';
+        return '<div class="staff-case '+(change===0?'current':'')+'">'+
+          '<div class="people">'+label+'</div>'+
+          '<div class="output">'+fmt(capacity)+'</div>'+
+          '<div class="delta '+(difference>=0?'positive':'negative')+'">'+
+          (difference>=0?'+':'')+fmt(difference)+' units</div>'+
+          '<div class="hint">'+fmt(modeledStaff,1)+' people</div></div>';
       }).join('');
     }
 
     function renderRecommendations(model,recommended){
       const netMinutes=model.available/60;
       const uptime=netMinutes/(n('shiftHours')*60*n('shifts'))*100;
-      const staffingExplanation=`Station-by-station minimum across ${fmt(model.lines)} ${model.lines===1?'line':'lines'}; theoretical labor is ${fmt(model.theoreticalRequired,2)} people.`;
       const recommendations=[
-        {b:`${fmt(netMinutes)} productive minutes`,s:`${fmt(uptime)}% of scheduled time remains after per-shift planned losses.`},
-        {b:`${fmt(recommended)} people to plan`,s:staffingExplanation}
+        {b:fmt(netMinutes)+' productive minutes',
+          s:fmt(uptime)+'% of scheduled time remains after per-shift planned losses.'},
+        {b:fmt(recommended)+' people to plan',
+          s:'Rounded up from '+fmt(model.required,2)+' theoretical people before relief coverage.'},
+        {b:fmt(model.eff*100)+'% efficiency factor',
+          s:'Keep this separate from breaks to avoid deducting planned losses twice.'}
       ];
-      recommendations.push({b:model.maxLoad>1?'Constraint intervention':'Line within takt',s:model.maxLoad>1?`Rebalance work or add staffing at ${model.bottleneck}.`:`Protect ${model.bottleneck||'the highest-load step'} from variability.`});
-      $('recommendations').innerHTML=recommendations.map(item=>`<div class="rec"><b>${esc(item.b)}</b><span>${esc(item.s)}</span></div>`).join('');
+      $('recommendations').innerHTML=recommendations.map(item=>
+        '<div class="rec"><b>'+esc(item.b)+'</b><span>'+esc(item.s)+'</span></div>'
+      ).join('');
+    }
+
+    function changeLaborUnit(){
+      const nextUnit=laborMultipliers[$('laborUnit').value]?$('laborUnit').value:'seconds';
+      const currentValue=n('laborContent');
+      if(Number.isFinite(currentValue)&&currentValue>0){
+        const converted=currentValue*laborMultipliers[previousLaborUnit]/laborMultipliers[nextUnit];
+        $('laborContent').value=String(Number(converted.toPrecision(12)));
+      }
+      previousLaborUnit=nextUnit;
+      calculate();
     }
 
     function applyTheme(theme){
@@ -371,24 +338,29 @@
       document.documentElement.dataset.theme=selected;
       const logo=$('brandLogo');
       if(logo)logo.src=selected==='dark'?logo.dataset.logoDark:logo.dataset.logoLight;
-      document.querySelectorAll('[data-theme-target]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.themeTarget===selected)));
+      document.querySelectorAll('[data-theme-target]').forEach(button=>{
+        button.setAttribute('aria-pressed',String(button.dataset.themeTarget===selected));
+      });
       const themeMeta=document.querySelector('meta[name="theme-color"]');
       if(themeMeta)themeMeta.setAttribute('content',selected==='dark'?'#0e1517':'#e8e4db');
       storeValue('bl-theme',selected);
     }
 
     document.querySelectorAll('input,select').forEach(input=>{
-      if(input.id==='period')return;
+      if(input.id==='period'||input.id==='laborUnit')return;
       input.addEventListener('input',calculate);
     });
+
     $('period').addEventListener('change',()=>applyPeriodPreset(false));
-    $('addStep').addEventListener('click',()=>{steps.push({name:`Process step ${steps.length+1}`,cycle:60,people:1});renderStepInputs();calculate()});
-    document.querySelectorAll('[data-theme-target]').forEach(button=>button.addEventListener('click',()=>applyTheme(button.dataset.themeTarget)));
+    $('laborUnit').addEventListener('change',changeLaborUnit);
+    document.querySelectorAll('[data-theme-target]').forEach(button=>{
+      button.addEventListener('click',()=>applyTheme(button.dataset.themeTarget));
+    });
 
     restoreState();
-    renderStepInputs();
     applyTheme(storedValue('bl-theme')==='dark'?'dark':'light');
     applyPeriodPreset(true);
+  
   </script>
 </body>
 </html>
